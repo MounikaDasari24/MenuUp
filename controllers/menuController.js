@@ -24,6 +24,7 @@ const addMenuItem = async (req, res) => {
 // Get menu for a store
 const getMenu = async (req, res) => {
   const { storeId } = req.params;
+  console.log('Fetching menu for store:', storeId);
   try {
     const menu = await MenuItem.find({ storeId });
     res.status(200).json(menu);
