@@ -9,7 +9,7 @@ const {
 const router = express.Router();
 
 router.post('/:storeId/menu', addMenuItem);
-router.get('/:storeId/menu', getMenu);
+router.get('/store/:storeId/menu', getMenu);
 router.put('/menu/:id', updateMenuItem);
 router.delete('/:storeId/menu/:itemId', deleteMenuItem);
 
